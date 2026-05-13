@@ -21,15 +21,15 @@ export const update_groupbuy = (id, data)=>{
 };
 
 export const cancel_groupbuy = (id)=>{
-    return Send.post(`/admin/v1/group-buy/${id}/cancel`);
+    return Send.patch(`/admin/v1/group-buy/${id}/cancel`);
 };
 
 export const prepare_groupbuy = (id)=>{
-    return Send.post(`/admin/v1/group-buy/${id}/prepare`);
+    return Send.patch(`/admin/v1/group-buy/${id}/prepare`);
 };
 
 export const complete_groupbuy = (id)=>{
-    return Send.post(`/admin/v1/group-buy/${id}/complete`);
+    return Send.patch(`/admin/v1/group-buy/${id}/complete`);
 };
 
 export const get_participants = (id)=>{

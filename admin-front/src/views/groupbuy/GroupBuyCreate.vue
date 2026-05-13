@@ -14,14 +14,14 @@
                         <CCol :md="9">
                             <CFormInput
                                 v-model="store.form_data.productUrl"
-                                size="sm"
+                                size="md"
                                 placeholder="상품 URL을 입력하세요"
                             />
                         </CCol>
                         <CCol :md="3">
                             <CButton
                                 color="secondary"
-                                size="sm"
+                                size="md"
                                 class="w-100"
                                 :disabled="is_fetching"
                                 @click="handle_fetch_product"
@@ -36,12 +36,12 @@
 
                     <div class="mb-3">
                         <CFormLabel>상품명</CFormLabel>
-                        <CFormInput v-model="store.form_data.productName" size="sm" required />
+                        <CFormInput v-model="store.form_data.productName" size="md" required />
                     </div>
 
                     <div class="mb-3">
                         <CFormLabel>상품 이미지 URL</CFormLabel>
-                        <CFormInput v-model="store.form_data.productImageUrl" size="sm" />
+                        <CFormInput v-model="store.form_data.productImageUrl" size="md" />
                     </div>
 
                     <div v-if="store.form_data.productImageUrl" class="mb-3">
@@ -50,17 +50,17 @@
 
                     <div class="mb-3">
                         <CFormLabel>수입사</CFormLabel>
-                        <CFormInput v-model="store.form_data.importerName" size="sm" />
+                        <CFormInput v-model="store.form_data.importerName" size="md" />
                     </div>
 
                     <div class="mb-3">
                         <CFormLabel>정가</CFormLabel>
-                        <CFormInput v-model.number="store.form_data.originalPrice" size="sm" type="number" required />
+                        <CFormInput v-model.number="store.form_data.originalPrice" size="md" type="number" required />
                     </div>
 
                     <div class="mb-3">
                         <CFormLabel>상품 설명</CFormLabel>
-                        <CFormInput v-model="store.form_data.productDescription" size="sm" />
+                        <CFormInput v-model="store.form_data.productDescription" size="md" />
                     </div>
 
                     <hr />
@@ -68,57 +68,57 @@
 
                     <div class="mb-3">
                         <CFormLabel>공구 제목</CFormLabel>
-                        <CFormInput v-model="store.form_data.title" size="sm" required />
+                        <CFormInput v-model="store.form_data.title" size="md" required />
                     </div>
 
                     <div class="mb-3">
                         <CFormLabel>공구 가격</CFormLabel>
-                        <CFormInput v-model.number="store.form_data.groupbuyPrice" size="sm" type="number" required />
+                        <CFormInput v-model.number="store.form_data.groupbuyPrice" size="md" type="number" required />
                     </div>
 
                     <CRow class="mb-3">
                         <CCol :md="6">
                             <CFormLabel>목표 수량</CFormLabel>
-                            <CFormInput v-model.number="store.form_data.targetQuantity" size="sm" type="number" required />
+                            <CFormInput v-model.number="store.form_data.targetQuantity" size="md" type="number" required />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel>최대 수량</CFormLabel>
-                            <CFormInput v-model.number="store.form_data.maxQuantity" size="sm" type="number" required />
+                            <CFormInput v-model.number="store.form_data.maxQuantity" size="md" type="number" required />
                         </CCol>
                     </CRow>
 
                     <CRow class="mb-3">
                         <CCol :md="6">
                             <CFormLabel>1인 최소 수량</CFormLabel>
-                            <CFormInput v-model.number="store.form_data.minPerUser" size="sm" type="number" required />
+                            <CFormInput v-model.number="store.form_data.minPerUser" size="md" type="number" required />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel>1인 최대 수량</CFormLabel>
-                            <CFormInput v-model.number="store.form_data.maxPerUser" size="sm" type="number" required />
+                            <CFormInput v-model.number="store.form_data.maxPerUser" size="md" type="number" required />
                         </CCol>
                     </CRow>
 
                     <CRow class="mb-3">
                         <CCol :md="6">
                             <CFormLabel>시작일시</CFormLabel>
-                            <CFormInput v-model="store.form_data.startAt" size="sm" type="datetime-local" required />
+                            <CFormInput v-model="store.form_data.startAt" size="md" type="datetime-local" required />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel>마감일시</CFormLabel>
-                            <CFormInput v-model="store.form_data.endAt" size="sm" type="datetime-local" required />
+                            <CFormInput v-model="store.form_data.endAt" size="md" type="datetime-local" required />
                         </CCol>
                     </CRow>
 
                     <div class="mb-3">
                         <CFormLabel>배송 예정일</CFormLabel>
-                        <CFormInput v-model="store.form_data.deliveryDate" size="sm" type="date" required />
+                        <CFormInput v-model="store.form_data.deliveryDate" size="md" type="date" required />
                     </div>
 
                     <div class="d-flex gap-2">
-                        <CButton type="submit" color="primary" size="sm" :disabled="is_submitting">
+                        <CButton type="submit" color="primary" size="md" :disabled="is_submitting">
                             {{ is_submitting ? "등록 중..." : "등록" }}
                         </CButton>
-                        <CButton color="light" size="sm" @click="router.push('/groupbuy/list')">
+                        <CButton color="light" size="md" @click="router.push('/groupbuy/list')">
                             취소
                         </CButton>
                     </div>

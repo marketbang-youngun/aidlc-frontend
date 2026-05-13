@@ -16,16 +16,6 @@
           </div>
 
           <div class="modal-field">
-            <label class="modal-label">표시 이름</label>
-            <input
-              type="text"
-              class="modal-input"
-              v-model="display_name"
-              placeholder="표시될 이름을 입력하세요"
-            />
-          </div>
-
-          <div class="modal-field">
             <label class="modal-label">수량</label>
             <div class="qty-selector">
               <button class="qty-btn" @click="decrease_qty" :disabled="quantity <= min_qty">-</button>
@@ -99,7 +89,7 @@ const formatted_amount = computed(()=>{
 });
 
 const is_valid = computed(()=>{
-  return email.value.trim() !== "" && display_name.value.trim() !== "" && quantity.value >= min_qty.value && quantity.value <= max_qty.value;
+  return email.value.trim() !== "" && quantity.value >= min_qty.value && quantity.value <= max_qty.value;
 });
 
 const decrease_qty = ()=>{
@@ -121,7 +111,7 @@ const handle_submit = async()=>{
   try{
     await join_groupbuy(props.groupBuy.id, {
       email: email.value.trim(),
-      displayName: display_name.value.trim(),
+      displayName: email.value.trim().split("@")[0],
       quantity: quantity.value
     });
     is_success.value = true;
