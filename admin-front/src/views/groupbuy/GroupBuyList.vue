@@ -47,7 +47,7 @@
                                     {{ get_status_label(item.status) }}
                                 </CBadge>
                             </CTableDataCell>
-                            <CTableDataCell>{{ item.currentQuantity || 0 }}/{{ item.targetQuantity }}</CTableDataCell>
+                            <CTableDataCell>{{ item.currentQty || 0 }}/{{ item.targetQty }}</CTableDataCell>
                             <CTableDataCell>{{ item.endAt }}</CTableDataCell>
                         </CTableRow>
                         <CTableRow v-if="list.length === 0">
@@ -108,7 +108,7 @@ const list = ref([]);
 const fetch_list = async()=>{
     try{
         const res = await get_groupbuy_list(current_status.value, current_page.value, page_size);
-        list.value = res.data || [];
+        list.value = res.data?.content || [];
     }catch(e){
         console.error(e);
         list.value = [];
