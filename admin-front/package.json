@@ -1,0 +1,26 @@
+{
+    "name": "admin-front",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@coreui/coreui": "^4.3.0",
+        "@coreui/icons": "^3.0.1",
+        "@coreui/icons-vue": "^2.0.0",
+        "@coreui/vue": "^4.7.0",
+        "axios": "^1.6.0",
+        "pinia": "^2.1.0",
+        "vue": "^3.4.0",
+        "vue-router": "^4.3.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.0.0",
+        "sass": "^1.70.0",
+        "vite": "^5.0.0"
+    }
+}
